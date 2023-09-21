@@ -1,0 +1,61 @@
+//공용체
+#include <stdio.h>
+
+union Data {
+    float v1;
+    float v2;
+};
+
+int main() {
+    union Data data;
+
+    data.v1 = 42;
+    printf("%.2f\n", data.v1);
+
+    data.v2 = 3.14;
+    printf("%.2f\n", data.v2);
+
+    return 0;
+}
+
+//열거형
+#include <stdio.h>
+
+enum Day {
+    SUNDAY, //0
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY
+};
+
+
+int main() {
+  enum Day today = MONDAY;
+
+  switch(today){
+    case 1:
+      printf("오늘은 월요일입니다.");
+      break;
+    case 2:
+      printf("오늘은 화요일입니다.");
+      break;
+    case 3:
+      printf("오늘은 수요일입니다.");
+      break;
+    case 4:
+      printf("오늘은 목요일입니다.");
+      break;
+    case 5:
+      printf("오늘은 금요일입니다.");
+      break;
+    case 6:
+      printf("오늘은 토요일입니다.");
+      break;
+    default :
+      printf("오늘은 일요일입니다.");
+  }
+ 
+}
